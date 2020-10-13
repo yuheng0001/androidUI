@@ -17,6 +17,8 @@
 
 ![](https://github.com/yuheng0001/androidUI/blob/master/XMLcustomize.png)
 
+![](https://github.com/yuheng0001/androidUI/blob/master/XMLcustomize2.png)
+
 ##创建上下文操作模式(ActionMode)的上下文菜单
 
 源码在actionmode里
