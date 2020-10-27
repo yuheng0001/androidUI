@@ -36,21 +36,17 @@ public class MainActivity extends AppCompatActivity {
         for(int i = 0; i < 5; i++){
             list.add(new Item(name[i], false));
         }
-        //对listview进行适配器适配
         adapter = new MyContactAdapter(list, MainActivity.this);
         listView.setAdapter(adapter);
 
-        //设置listview允许多选模式
         listView.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE_MODAL);
         listView.setMultiChoiceModeListener(new MultiChoiceModeListener() {
-            //选中数量
             int num = 0;
 
 
             @Override
             public void onItemCheckedStateChanged(ActionMode mode, int position, long id, boolean checked) {
 
-                // 调整选定条目
                 if (checked == true) {
                     list.get(position).setBo(true);
                     //实时刷新
@@ -62,13 +58,11 @@ public class MainActivity extends AppCompatActivity {
                     adapter.notifyDataSetChanged();
                     num--;
                 }
-                // 用TextView显示
                 mode.setTitle("  " + num + " Selected");
             }
 
             @Override
             public boolean onCreateActionMode(ActionMode mode, Menu menu) {
-                // 设置长按后所要显示的标题栏的内容
                 MenuInflater inflater = mode.getMenuInflater();
                 inflater.inflate(R.menu.multi_acitonmode_menu, menu);
                 num = 0;
@@ -78,12 +72,8 @@ public class MainActivity extends AppCompatActivity {
             }
 
 
-            /*
-             * 可在此方法中进行标题栏UI的创建和更新
-             */
             @Override
             public boolean onPrepareActionMode(ActionMode mode, Menu menu) {
-
                 adapter.notifyDataSetChanged();
                 return false;
             }
@@ -94,21 +84,16 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
 
-            /*
-             * 可在此方法中监听标题栏Menu的监听，从而进行相应操作
-             * 设置actionMode菜单每个按钮的点击事件
-             */
+
             @Override
             public boolean onActionItemClicked(ActionMode mode, MenuItem item) {
                 switch (item.getItemId()) {
-                    //全选
                     case R.id.menu_all:
                         num = 0;
                         refresh();
                         adapter.notifyDataSetChanged();
                         mode.finish();
                         return true;
-                    //删除
                     case R.id.menu_delete:
                         adapter.notifyDataSetChanged();
                         num = 0;
