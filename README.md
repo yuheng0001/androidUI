@@ -9,8 +9,6 @@
 源码在listview里，使用了简单的Toast响应单击事件，listview的主要源码
 
 ![](https://github.com/yuheng0001/androidUI/blob/master/listview-item.png)
-
-
 ![](https://github.com/yuheng0001/androidUI/blob/master/listview-mainactivity.png)
 
 listvie的选中高亮使用了listSelector属性
@@ -22,9 +20,7 @@ listvie的选中高亮使用了listSelector属性
 源码在alertdialog里，用view_dialog.xml自定义了对话框布局
 
 ![](https://github.com/yuheng0001/androidUI/blob/master/view-dialog.png)
-
 ![](https://github.com/yuheng0001/androidUI/blob/master/dialog-mainactivity.png)
-
 
 运行效果如图：
 
@@ -34,12 +30,22 @@ listvie的选中高亮使用了listSelector属性
 
 源码在XMLcustomize里，新建了一个menu_main.xml文件定义了菜单布局，在Mainactivity里设置响应。
 
-![](https://github.com/yuheng0001/androidUI/blob/master/XMLcustomize.png)
+![](https://github.com/yuheng0001/androidUI/blob/master/XMLmenu-main.png)
+![](https://github.com/yuheng0001/androidUI/blob/master/XMLmenu-mainactivity.png)
 
+运行效果如图：
+
+![](https://github.com/yuheng0001/androidUI/blob/master/XMLcustomize.png)
 ![](https://github.com/yuheng0001/androidUI/blob/master/XMLcustomize2.png)
 
 ## 创建上下文操作模式(ActionMode)的上下文菜单
 
-源码在actionmode里
+源码在actionmode里，重新定义了一个适配器和item。lyout和前面差不多。
+
+![](https://github.com/yuheng0001/androidUI/blob/master/actionmode-java-MyContactAdapter.png)
+![](https://github.com/yuheng0001/androidUI/blob/master/actionmode-java-item.png)
+![](https://github.com/yuheng0001/androidUI/blob/master/actionmode-java-mainactivity.png)
+
+运行效果如图：
 
 ![](https://github.com/yuheng0001/androidUI/blob/master/ActionMode1.png)
